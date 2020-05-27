@@ -82,7 +82,7 @@ func NewPeer(conn *websocket.Conn, genesisID BlockID, peerStore PeerStorage,
 // peerDialer is the websocket.Dialer to use for outbound peer connections
 var peerDialer *websocket.Dialer = &websocket.Dialer{
 	Proxy:            http.ProxyFromEnvironment,
-	HandshakeTimeout: 15 * time.Second,
+	HandshakeTimeout: 25 * time.Second,
 	Subprotocols:     []string{Protocol}, // set in protocol.go
 	TLSClientConfig:  tlsClientConfig,    // set in tls.go
 }
