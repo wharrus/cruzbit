@@ -80,8 +80,8 @@ func NewPeerManager(
 	server := &http.Server{
 		Addr:         "0.0.0.0:" + strconv.Itoa(port),
 		TLSConfig:    tlsServerConfig, // from tls.go
-		ReadTimeout:  10 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		ReadTimeout:  20 * time.Second,
+		WriteTimeout: 20 * time.Second,
 	}
 
 	return &PeerManager{
